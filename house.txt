@@ -1,0 +1,39 @@
+Enter file contentfunction house()
+  walls(len)
+  roof(len)
+end
+
+function walls(len)
+  for W = 1,4,1 do
+    turtle.up()
+    layer(len)
+  end
+end
+
+function layer(len)
+  for L = 1,4,1 do
+    row()
+    turtle.turnRight(len)
+  end
+end
+
+function row(len)
+  for R=1,4,1 do
+    turtle.placeDown()
+    turtle.forward()
+  end
+end
+
+function roof(len)
+  for rr=1,len+1,1 do
+    row(len+1);
+    turtle.backward(len+1)
+    turtle.turnRight()
+    turtle.forward()
+    turtle.turnLeft()
+  end
+end
+
+print "hello"
+house()
+s here
